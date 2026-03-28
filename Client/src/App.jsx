@@ -1,16 +1,12 @@
-import { Route, Routes } from "react-router-dom"
-import Page from "./Pages/Home-page.jsx"
-import Forms from "./Pages/Forms.jsx"
-import MemoryUpload from "./Pages/Memory-upload.jsx"
-function App() {
+import {Routes, Route} from 'react-router-dom';
+import Home from './Pages/home.jsx';
+import Auth from './Pages/auth.jsx';
 
-  return (
-    <Routes>
-      <Route path="/" element={<Page/>}/>
-      <Route path="/forms" element={<Forms/>}/>
-      <Route path="/memory" element={<MemoryUpload/>}/>
-    </Routes>
-  )
+export default function App() {
+    return(
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/auth' element={<Auth />} />
+        </Routes>
+    )
 }
-
-export default App
